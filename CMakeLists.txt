@@ -15,8 +15,6 @@ if(CMAKE_COMPILER_IS_GNUCC)
 	message(FATAL_ERROR "Building IncludeOS with gcc is not currently supported. Please clean-up build directory and configure for clang through CC and CXX environmental variables.")
 endif(CMAKE_COMPILER_IS_GNUCC)
 
-set(INCLUDEOS_ROOT ${CMAKE_CURRENT_SOURCE_DIR}/)
-
 # get new stack protector value
 execute_process(COMMAND git describe --dirty
 	        WORKING_DIRECTORY ${INCLUDEOS_ROOT}
